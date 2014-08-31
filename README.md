@@ -1,6 +1,8 @@
 # example-clojure-rest
 
-FIXME
+RESTful API exposeing a MySQL database written in Clojure with a simple AngularJs frontend. User adds image 
+URLs and they are displayed in a Masonry style layout. Also includes a user login section and password encryption
+for stored passwords in the DB.
 
 ## Prerequisites
 
