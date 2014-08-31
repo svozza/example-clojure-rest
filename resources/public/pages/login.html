@@ -1,0 +1,71 @@
+<div class="container" style="width: 30%; text-align: center">
+	<div>
+		<tabset> <tab heading="Login">
+
+		<form name="loginForm" class="form-horizontal" role="form">
+			<h3 class="form-signin-heading">Please sign in</h3>
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-3 control-label">User
+					Name:</label>
+				<div class="col-sm-9">
+					<input ng-model="credentials.login" class="form-control"
+						placeholder="Login" required autofocus>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-3 control-label">Password:</label>
+				<div class="col-sm-9">
+					<input type="password" ng-model="credentials.password"
+						class="form-control" placeholder="Password" required>
+				</div>
+			</div>
+
+			<div class="checkbox" style="text-align: left">
+				<label> <input type="checkbox" value="remember-me">
+					Remember me
+				</label>
+			</div>
+			<button class="btn btn-default" type="submit"
+				ng-click="login()">Sign in</button>
+				
+		</form>
+
+		</tab> <tab heading="Register">
+		<form name="loginForm" class="form-horizontal" role="form">
+			<h3 class="form-signin-heading">Please register</h3>
+
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-3 control-label">Email:</label>
+				<div class="col-sm-9">
+
+					<input type="text" ng-model="user.mail" class="form-control"
+						 required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-3 control-label">Login
+					Name:</label>
+				<div class="col-sm-9">
+
+					<input type="text" ng-model="user.login" class="form-control"
+						required autofocus>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-3 control-label">Password:</label>
+				<div class="col-sm-9">
+
+					<input type="password" ng-model="user.password"
+						class="form-control" required>
+				</div>
+			</div>
+
+			<button style="width: 100%" class="btn btn-default" type="submit"
+				ng-click="register()">Register</button>
+		</form>
+		</tab> </tabset>
+		<h4>{{status}}</h4>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+body {
+    margin-top: 1em;
+}
+
+.container.brick {
+    width: 75%;
+    text-align: center;
+}
+
+.container.addimage {
+    width: 30%;
+    text-align: center;
+}
+
+.masonry-brick {
+    margin: 1em;
+    display: none;
+    height: 250px;
+    width: 250px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.masonry-brick.loaded {
+    display: block;
+}
