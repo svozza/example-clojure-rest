@@ -12,21 +12,13 @@ clojApp.config(function($routeProvider) {
 	.when('/login', {
 		templateUrl: 'pages/login.html',
 		controller: 'LoginCtrl',
-		publicAccess: true
 	});
 });
 
 clojApp.run(function($window, $rootScope, $location, $route) {
 
-	var routesOpenToPublic = [];
-	angular.forEach($route.routes, function(route, path) {
-		// push route onto routesOpenToPublic if it has a truthy publicAccess value
-		route.publicAccess && (routesOpenToPublic.push(path));
-	});
-
 	$rootScope.$on('$routeChangeStart', function(event, nextLoc, currentLoc) {
-		var closedToPublic = (-1 === routesOpenToPublic.indexOf($location.path()));
-		if (closedToPublic && !window.sessionStorage.loggedIn) {
+		if (!window.sessionStorage.loggedIn) {
 			$location.path('/login');
 		}
 	});
